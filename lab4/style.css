@@ -1,0 +1,80 @@
+/* Global configuration: margin, padding */
+body, ul, li, dl, dt, dd, ol
+{
+	
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Global configuration: text alignment */
+body
+{
+	text-align: center;	/* try left, right*/
+}
+
+/* Specific text alignment style for an unordered list */
+ul{
+	width: 95%;
+	text-align: left; /* try center, left , right*/
+}
+
+/* Text and image alignment in "header" DIV */
+img {
+	vertical-align: middle;
+}
+
+/* The three DIV tags: Border style, margin, make sure the content is horizontally centered */
+div 
+{
+	/* Following two lines: specifying border style */
+	
+	border-radius: .5rem;
+	
+	/* Following two lines: specifying alignment in a DIV */
+	width: 98%;		
+	margin: 5px auto; /*bottom-top: 5px, auto for left-right (center in horizontal) */
+	
+	padding: 0;
+	
+}
+
+/* Header DIV: use a larger font size */
+.header
+{
+	font-size: 2em; /* check W3Schools for details and examples*/
+}
+
+/* Content DIV: different border style from header and footer DIVs*/
+.content
+{
+	background: lightgrey;
+	border-radius: 0rem;	
+}
+
+/* Fotter DIV: different padding*/
+.footer
+{
+	padding: 1% 0;
+}
+
+.courses
+{
+	width:145px;
+}
+
+.olAlign
+{
+	margin-left: 50px;	
+}
+
+/* style for an item (DT) of a definition list (DL)  */
+dt{
+	font-weight:bold;
+	border: 2px dotted blue;
+	background:lightblue;	
+}
+
+/* pseduo class for DT*/
+dt:hover{
+	background:orange;
+}

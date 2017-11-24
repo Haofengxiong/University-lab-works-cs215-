@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Lab12</title>
+<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script>
+<script>
+function showHint(str)
+{
+if (str.length==0)
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+  
+dojo.xhrGet({
+    url: "gethint.php",
+    handleAs: "text",
+        preventCache: true,
+        content: {
+            q: str
+            },
+            load: function(data) {
+                data = data.replace(/\n/g, "<br>");
+                data = data.replace(/\t/g, "   ");
+                document.getElementById("txtHint").innerHTML = data;
+                },
+                error: function(error) {
+                    targetNode.innerHTML = "Error!!" + error;
+                    }}); 
+}
+</script>
+</head>
+<body>
+
+<p><b>Start typing a name in the input field below:</b></p>
+<form>
+First name: <input type="text" onkeyup="showHint(this.value)">
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+</body>
+</html>
