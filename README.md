@@ -1,2 +1,1 @@
-# cs215-lab
-These are school labs.
+These are university lab works.(CS215)
